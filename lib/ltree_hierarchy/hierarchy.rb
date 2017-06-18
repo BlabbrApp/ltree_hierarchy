@@ -100,9 +100,9 @@ module Ltree
 
       def compute_path
         if parent
-          "#{parent.ltree_path}.#{ltree_fragment}"
+          "#{commentable_type}.#{commentable_id}.#{parent.ltree_path}.#{ltree_fragment}"
         else
-          ltree_fragment.to_s
+          "#{commentable_type}.#{commentable_id}.#{ltree_fragment.to_s}"
         end
       end
 
